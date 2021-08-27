@@ -22,6 +22,12 @@ var planner = [
 /*Current Day*/ 
 $("currentDay").text(today); 
 
+/* Local Storage check */
+var events = JSON.parse(localStorage.getItem("workDay"));
+if (events) {
+  planner = events;
+}
+
 /*Create rows */
 planner.forEach(function(timeBlock, index) {
     var label = timeBlock; 
@@ -39,10 +45,10 @@ planner.forEach(function(timeBlock, index) {
 /* Color rows based on current time */
 function colorRow(time) {
 	var planNow = moment(now, "H A");
-	var Entry = moment(time, "H A");
-	if (planNow.isBefore(planEntry) === true) {
+	var entry = moment(time, "H A");
+	if (planNow.isBefore(entry) === true) {
 		return "future";
-	} else if (planNow.isAfter(Entry) === true) {
+	} else if (planNow.isAfter(entry) === true) {
 		return "past";
 	} else {
 		return "present";
