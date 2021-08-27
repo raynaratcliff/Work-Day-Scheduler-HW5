@@ -36,3 +36,15 @@ planner.forEach(function(timeBlock, index) {
 
 }); 
 
+/* Color rows based on current time */
+function colorRow(time) {
+	var planNow = moment(now, "H A");
+	var Entry = moment(time, "H A");
+	if (planNow.isBefore(planEntry) === true) {
+		return "future";
+	} else if (planNow.isAfter(Entry) === true) {
+		return "past";
+	} else {
+		return "present";
+	}
+}
