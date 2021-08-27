@@ -30,12 +30,18 @@ if (events) {
 
 /*Create rows */
 planner.forEach(function(timeBlock, index) {
-    var label = timeBlock; 
+    var label = timeBlock.time; 
     var blockColor = colorRow(label);
-    var row = '<div class="time-block" id="' + index +
+    var row = 
+    '<div class="time-block" id="' +
+    index +
     '"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">' +
-        label + '</div><textarea class="form-control ' + blockColor + '">' + timeBlock.event +
-        '</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-save"></i></button></div></div></div>';
+    label +
+    '</div><textarea class="form-control ' +
+    blockColor +
+    '">' +
+    timeBlock.event +
+    '</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-save"></i></button></div></div></div>';
 
     /* Adding rows to container div */
     $(".container").append(row);
