@@ -1,4 +1,3 @@
-
 $(function () {});
   
 /* Declare Variables */
@@ -60,3 +59,22 @@ function colorRow(time) {
 		return "present";
 	}
 }
+
+/* Save Events */
+$(".saveBtn").on("click", function() {
+	var blockID = parseInt(
+		$(this)
+			.closest(".time-block")
+			.attr("id")
+	);
+	var userEntry = $.trim(
+		$(this)
+			.parent()
+			.siblings("textarea")
+			.val()
+	);
+	planner[blockID].event = userEntry;
+
+	/* Set local storage */
+	localStorage.setItem("workDay", JSON.stringify(planner));
+});
