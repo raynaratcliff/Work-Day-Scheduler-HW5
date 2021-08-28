@@ -14,7 +14,7 @@ This web application functions as an event planner for a day of work.
 ### Current time sensitivity
 The calendar spans a workday from 9AM to 5PM. The current date is displayed at the top of the planner. Each work hour is color-coded based on the current time of day. Hours in the past are gray, the present hour is red, and future hours are green.  
 
-![Image of Time Blocks](timeblock.png)
+![Image of Time Blocks](timeblocks.png)
 
 ![Image of Color Blocks](timeblocks.png)
 
