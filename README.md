@@ -16,7 +16,7 @@ The calendar spans a workday from 9AM to 5PM. The current date is displayed at t
 
 ![Image of Time Blocks](timeblocks.png)
 
-![Image of Color Blocks](timeblocks.png)
+![Image of Color Blocks](Colorblock.png)
 
 
 ### Event Saving
