@@ -20,7 +20,7 @@ The calendar spans a workday from 9AM to 5PM. The current date is displayed at t
 
 
 ### Event Saving
-When the user inputs a new event into an hour time block on the planner, user can save the event into local storage by clicking the blue save button to the right of the event. The save button will not work if only spaces are entered or no new event is added. If a new event is entered and the save button is not clicked, it will not be saved to local storage. 
+When the user inputs a new event into an hour time block on the planner, user can save the event into local storage by clicking the blue save button to the right of the event. If a new event is entered and the save button is not clicked, it will not be saved to local storage. 
 
 When the page is re-visited, saved events are added to the planner from local storage. 
 
